@@ -67,7 +67,7 @@ function _scrollTo(target, offset) {
 
 		$('#steps-list li').on('mouseenter', function() {
 			var index = $('#steps-list li').index(this);
-			$('#phone ul').slick('slickGoTo', index, true);
+			$('#phone ul').slick('slickGoTo', index);
 		});
 	})
 })(jQuery)
