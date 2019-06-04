@@ -407,6 +407,32 @@ table.styled tr:nth-child(2n-1) td {
 		}
 	}
 
+	&.page {
+		margin-bottom: 80px;
+
+		@media (max-width: $adaptive-width-tablet) {
+			margin-bottom: 45px;
+		}
+
+		@media (max-width: $adaptive-width-mobile) {
+			margin-bottom: 25px;
+		}
+
+		.holder {
+			padding: 85px 0 55px;
+			min-height: 0;
+
+			#logo {
+				margin-bottom: 25px;
+			}
+
+			h1,
+			.h1 {
+				margin-bottom: 0;
+			}
+		}	
+	}
+
 	#logo {
 		display: block;
 		width: 182px;
@@ -1272,6 +1298,10 @@ footer {
 		font-size: 12px;
 	}
 
+	&.page {
+		border-top: 1px solid #D6D9DC;
+	}
+
 	.holder {
 		position: relative;
 	}
@@ -1296,8 +1326,9 @@ footer {
 
 	#copyright {
 		position: absolute;
-		top: 30px;
+		top: 25px;
 		@extend .padding-left;
+		font-size: 14px;
 		margin-left: 66px;
 
 		@media (max-width: $adaptive-width-tablet) {
@@ -1313,9 +1344,27 @@ footer {
 		}
 	}
 
+	#email {
+		position: absolute;
+		top: 44px;
+		@extend .padding-left;
+		font-size: 14px;
+		margin-left: 66px;
+		color: #3D8EE0;
+		display: block;
+		text-decoration: none;
+
+		@media (max-width: $adaptive-width-tablet-middle) {
+			position: static;
+			top: auto;
+			left: auto;
+			margin: -10px 0 19px;
+		}
+	}
+
 	#mn-footer {
 		position: absolute;
-		top: 30px;
+		top: 33px;
 		@extend .padding-right;
 		display: block;
 		font-size: 0;
@@ -1334,7 +1383,7 @@ footer {
 			display: inline;
 			vertical-align: middle;
 			color: #9EAAB4;
-			font-size: 16px;
+			font-size: 14px;
 			margin-left: 15px;
 
 			@media (max-width: $adaptive-width-tablet) {
@@ -1383,6 +1432,164 @@ footer {
 				&:hover {
 					color: #519CEB;
 				}
+			}
+
+			&.active {
+				a {
+					color: #3E4953;
+					cursor: default;
+				}
+			}
+		}
+	}
+}
+#help-scheme {
+	margin-bottom: 85px;
+
+	@media (max-width: $adaptive-width-tablet-small) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: $adaptive-width-mobile) {
+		margin-bottom: 35px;
+	}
+
+	ul {
+		display: block;
+
+		& > li {
+			display: block;
+			position: relative;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 300;
+			min-height: 113px;
+			padding: 23px 0 0 153px;
+			margin-bottom: 38px;
+
+			@media (max-width: $adaptive-width-tablet-small) {
+				font-size: 16px;
+				min-height: 100px;
+				padding: 18px 0 0 130px;
+			}
+
+			@media (max-width: $adaptive-width-mobile) {
+				font-size: 14px;
+				min-height: 70px;
+				padding: 10px 0 0 90px;
+				margin-bottom: 22px;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 113px;
+				height: 113px;
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				@media (max-width: $adaptive-width-tablet-small) {
+					width: 100px;
+					height: 100px;
+				}
+
+				@media (max-width: $adaptive-width-mobile) {
+					width: 70px;
+					height: 70px;
+				}
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: -35px;
+				left: 55px;
+				width: 3px;
+				height: 31px;
+				background-image: url('../../images/line1.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				@media (max-width: $adaptive-width-tablet-small) {
+					width: 3px;
+					height: 26px;
+					left: 50px;
+				}
+
+				@media (max-width: $adaptive-width-mobile) {
+					display: none;
+				}
+			}
+
+			&.step1 {
+				&:before {
+					background-image: url('../../images/ico_help_step1.svg');
+				}
+				&:after {
+					display: none;
+				}
+			}
+
+			&.step2 {
+				&:before {
+					background-image: url('../../images/ico_help_step2.svg');
+				}
+			}
+
+			&.step3 {
+				&:before {
+					background-image: url('../../images/ico_help_step3.svg');
+				}
+				&:after {
+					height: 33px;
+					background-image: url('../../images/line2.svg');
+				}
+			}
+
+			&.step4 {
+				&:before {
+					background-image: url('../../images/ico_help_step4.svg');
+				}
+			}
+
+			&.step5 {
+				&:before {
+					background-image: url('../../images/ico_help_step5.svg');
+				}
+				&:after {
+					height: 33px;
+					background-image: url('../../images/line2.svg');
+				}
+			}
+
+			&.step6 {
+				&:before {
+					background-image: url('../../images/ico_help_step6.svg');
+				}
+			}
+
+			h2,
+			.h2 {
+				font-size: 23px;
+				font-weight: 600;
+				margin-bottom: 10px;
+
+				@media (max-width: $adaptive-width-tablet-small) {
+					font-size: 21px;
+				}
+
+				@media (max-width: $adaptive-width-mobile) {
+					font-size: 18px;
+					margin-bottom: 6px;
+				}
+			}
+
+			p {
+				margin-bottom: 0;
 			}
 		}
 	}
