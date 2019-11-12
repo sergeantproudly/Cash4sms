@@ -1,0 +1,3 @@
+User-Agent: *
+Sitemap: https://cash4sms.today/cash4sms.today-sitemap.xml
+
