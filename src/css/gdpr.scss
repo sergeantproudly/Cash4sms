@@ -1,0 +1,94 @@
+/* GDPR */
+
+button#ihavecookiesBtn {
+  margin-left: 0px !important;
+}
+
+/* Cookie Dialog */
+#gdpr-cookie-message {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  max-width: 375px;
+  background-color: rgba(255, 255, 255, .65);
+  padding: 30px 45px 35px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  z-index: 9;
+  @extend .radius;
+}
+
+#gdpr-cookie-message h4 {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+#gdpr-cookie-message h5 {
+  font-family: $font-main;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#gdpr-cookie-message p,
+#gdpr-cookie-message ul {
+  color: black;
+  font-size: 15px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+#gdpr-cookie-message p:last-child {
+  margin-bottom: 0;
+}
+#gdpr-cookie-message ul {
+  text-align: left;
+}
+#gdpr-cookie-message li {
+  width: 49%;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#gdpr-cookie-message a {
+  font-size: 15px;
+
+  &:hover {
+    color: $color-text-blue;
+    opacity: 0.8;
+  }
+}
+
+#gdpr-cookie-message button,
+button#ihavecookiesBtn {
+  background-color: #1DA1F2;
+  border: 0;
+  padding: 8px 16px;
+  color: #fff;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -khtml-border-radius: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  @extend .transition-bg;
+
+  &:hover {
+    background-color: lighten(#1DA1F2, 10%);
+    @extend .transition-bg;
+  }
+}
+
+button#gdpr-cookie-advanced {
+  margin-left: 15px;
+}
+
+#gdpr-cookie-message button:disabled {
+  opacity: 0.3;
+}
+
+#gdpr-cookie-message input[type="checkbox"] {
+  float: none;
+  margin-top: 0;
+  margin-right: 5px;
+}
