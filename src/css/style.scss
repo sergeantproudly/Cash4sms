@@ -2370,6 +2370,12 @@ footer {
 		margin-bottom: 35px;
 	}
 
+	.date {
+		color: #cdcdcd;
+		font-size: 16px;
+		margin: -5px 0 25px;
+	}
+
 	p {
 		margin-bottom: 41px;
 
@@ -2583,4 +2589,118 @@ footer {
 }
 .hidden {
 	display: none;
+}
+#reviews {
+	text-align: left;
+	padding: 32px 0 54px;
+
+	@media (max-width: $adaptive-width-mobile) {
+		padding: 24px 0 30px;
+	}
+
+	h1,
+	.h1 {
+		margin-bottom: 36px;
+	}
+
+	ul {
+		display: block;
+
+		& > li {
+			display: block;
+			background: #fff;
+			padding: 20px 30px 22px 16px;
+			border-radius: 10px;
+			box-shadow: 0px 7px 16px #DBE0E2;
+			margin-bottom: 15px;
+
+			.photo {
+				float: left;
+				width: 48px;
+				height: 48px;
+				border-radius: 48px;
+
+				img {
+					width: 100%;
+					border-radius: 48px;
+				}
+
+				.letter {
+					display: block;
+					font-family: $font-review-letters;
+					width: 100%;
+					height: 100%;
+					border-radius: 48px;
+					text-align: center;
+					font-size: 28px;
+					font-weight: 500;
+					padding-top: 5px;
+					color: #fff;
+					background-color: #5D48B1;
+
+					&.red {
+						background-color: #F15050;
+					}
+
+					&.green {
+						background-color: #76B339;
+					}
+				}
+			}
+
+			.info {
+				margin-left: 68px;
+
+				h3,
+				.h3 {
+					font-size: 14px;
+					font-weight: 600;
+					line-height: 1.39;
+					margin-bottom: 2px;
+				}
+
+				.rating {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 0;
+					margin-bottom: 12px;
+
+					i {
+						display: inline-block;
+						width: 11px;
+						height: 11px;
+						background: url('../../images/ico_star_filled.svg') no-repeat;
+						margin-left: 2px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+					}
+				}
+
+				.date {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 10px;
+					line-height: 1.39;
+					cursor: default;
+					color: rgba(64, 86, 107, 0.5);
+					margin: 0 0 12px 13px;
+				}
+
+				.text {
+					font-size: 15px;
+					line-height: 1.39;
+
+					@media (max-width: $adaptive-width-mobile) {
+						font-size: 14px;
+					}
+
+					p:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
 }

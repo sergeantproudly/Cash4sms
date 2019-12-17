@@ -38,7 +38,7 @@
 </head>
 
 <body>
-	<div id="layout">
+	<div id="layout" itemscope itemtype="https://schema.org/SoftwareApplication">
 		<section id="intro" class="section">
 			<div class="holder">
 				<a href="#" id="logo" class="fadeInDownSmall fast animated">
@@ -81,7 +81,8 @@
 		<section id="what-is">
 			<div class="holder">
 				<h2 class="h1 fadeInRightSmall fast animated wow">What Is Cash4SMS?</h2>
-				<p class="fadeInRightSmall fast animated wow" data-wow-delay="0.2s">Cash4SMS is a cashback app that rewards its users for selling unused SMS messages. This opens the door to worldwide mobile carrier subscribers to make mobile communication more affordable and rewarding. All you need to do to join our growing network of mobile users, who are empowered to communicate without any limitations and let their mobile plans earn money for them, is an Android smartphone and a few minutes of your time.</p>
+				<p class="fadeInRightSmall fast animated wow" data-wow-delay="0.2s"><span itemprop="name">Cash4SMS</span> is a cashback app that rewards its users for selling unused SMS messages. This opens the door to worldwide mobile carrier subscribers to make mobile communication more affordable and rewarding. All you need to do to join our growing network of mobile users, who are empowered to communicate without any limitations and let their mobile plans earn money for them, is an <span itemprop="operatingSystem">Android</span> smartphone and a few minutes of your time.</p>
+				<link itemprop="applicationCategory" href="https://schema.org/FinanceApplication"/>
 			</div>
 		</section>
 
@@ -187,6 +188,62 @@
 					</li>
 				</ul>
 
+			</div>
+		</section>
+
+		<section id="reviews">
+			<div class="holder">
+				<h2 class="h1 fadeInDownSmall fast animated wow">What our customers say</h2>
+
+				<ul class="fadeInLeftSmall fast animated wow" data-wow-delay="0.2s">
+					<li itemprop="review" itemscope itemtype="http://schema.org/Review">
+						<div class="photo">
+							<span class="letter red">R</span>
+						</div>
+						<div class="info">
+							<h3 itemprop="author">Ronald Greene</h3>
+							<div class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><span itemprop="ratingValue">5</span> <i></i><i></i><i></i><i></i><i></i></div>
+							<div class="date">Nov 27, 2019</div>
+							<div class="text">
+								<p itemprop="description">I love the fact I'm getting money doing nothing. Thanks and keep up the good work! I'll share it with my friends it may be useful for them</p>
+							</div>
+						</div>
+					</li>
+
+					<li itemprop="review" itemscope itemtype="http://schema.org/Review">
+						<div class="photo">
+							<span class="letter">C</span>
+						</div>
+						<div class="info">
+							<h3 itemprop="author">Camila Mu</h3>
+							<div class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><span itemprop="ratingValue">5</span> <i></i><i></i><i></i><i></i><i></i></div>
+							<div class="date">Nov 26, 2019</div>
+							<div class="text">
+								<p itemprop="description">Thanks for the app I didn't regret I decided to download it. I got money as expected, I'd recommend cash4sms with my eyes closed</p>
+							</div>
+						</div>
+					</li>
+
+					<li itemprop="review" itemscope itemtype="http://schema.org/Review">
+						<div class="photo">
+							<span class="letter green">E</span>
+						</div>
+						<div class="info">
+							<h3 itemprop="author">Eĺizaveta Iatcov</h3>
+							<div class="rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><span itemprop="ratingValue">5</span> <i></i><i></i><i></i><i></i><i></i></div>
+							<div class="date" itemprop="datePublished">Nov 12, 2019</div>
+							<div class="text">
+								<p itemprop="description">Very nice. I make almost 40 euros per month, doing absolutely nothing. The app is simple and clear.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+					<meta itemprop="ratingValue" content = "3.9"/>
+					<meta itemprop="reviewCount" content = "20"/>
+					<meta itemprop="bestRating" content = "5"/>
+				</div>
 			</div>
 		</section>
 

@@ -53,3 +53,14 @@
     font-weight: 300;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-medium.eot');
+    src: url('../fonts/roboto-medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roboto-medium.svg#Montserrat') format('svg'),
+    url('../fonts/roboto-medium.woff2') format('woff2'),
+    url('../fonts/roboto-medium.woff') format('woff'),
+    url('../fonts/montrobotoserrat-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
