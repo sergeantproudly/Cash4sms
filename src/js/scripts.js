@@ -46,6 +46,7 @@ function _scrollTo(target, offset) {
 			_scrollTo($(this).attr('href'), -$(window).height()/12);
 		});
 
+		// phone slides
 		var autoplaySpeed = $('#phone').attr('data-autoplay-speed') * 1000;
 		$('#phone ul').slick({
 			infinite: true,
@@ -64,10 +65,31 @@ function _scrollTo(target, offset) {
 			$('#steps-list li:eq(' + nextIndex + ')').addClass('curr active');
 			$('#steps-list li:gt(' + nextIndex + ')').removeClass('active');
 		});
-
 		$('#steps-list li').on('mouseenter', function() {
 			var index = $('#steps-list li').index(this);
 			$('#phone ul').slick('slickGoTo', index);
 		});
+
+		// tariffs warning
+		if ($('#tariffs-warning').length) {
+			$warning = $('#tariffs-warning');
+			$warning.find('.step .btn').click(function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				var $curr = $(this).closest('.step');
+				var $next = $curr.next('.step');
+				if ($next.length) {
+					$warning.removeClass('step' + $curr.attr('data-index')).css('width', 'auto');
+					$curr.stop().fadeOut(__animationSpeed, function() {	
+						$next.stop().fadeIn(__animationSpeed);
+						var w = $next.outerWidth(true);
+						$warning.css('width', w).addClass('step' + $next.attr('data-index'));
+					});
+				} else {
+					$warning.removeClass('slideInLeftDouble').addClass('slideOutLeftDouble');
+				}
+			});
+		}
 	})
 })(jQuery)

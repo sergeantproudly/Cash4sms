@@ -16,7 +16,7 @@
 	<meta name="msapplication-config" content="images/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>Cash4sms - Get Cash Back From SMS You Don’t Use</title>
-	<link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/style.css?1"/>
 	<!--[if (gte IE 6)&(lte IE 8)]>
 	<script type="text/javascript" src="assets/js/html5.js"></script>
 	<script type="text/javascript">
@@ -338,6 +338,31 @@
 		</footer>
 	</div>
 
-	<script src="assets/js/scripts.js"></script>
+	<div id="tariffs-warning" class="warning step1 animated slideInLeftDouble" data-wow-delay="0.4s">
+		<div class="step step1" data-index="1">
+			<p class="nota">Please, read this, before installing our app</p>
+			<button class="btn">Read</button>
+		</div>
+		<div class="step step2" data-index="2">
+			<p class="heading">Before using Cash4SMS check your SMS rates</p>
+			<ul>
+				<li>
+					<p>
+						<strong>For clients from EU</strong>
+						Check SMS rate to EU. Must be less than 4 Euro cents per 1 SMS
+					</p>
+					<p>
+						<strong>For other clients</strong>
+						Check international SMS rates. Must be less than 4 Euro cents per 1 SMS
+					</p>
+				</li>
+			</ul>
+			<div class="btn-line">
+				<button class="btn">Ok, got it</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/scripts.js?1"></script>
 </body>
 </html>
