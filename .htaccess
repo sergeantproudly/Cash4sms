@@ -1,4 +1,7 @@
 Order Allow,Deny
 Allow from All
 AddDefaultCharset UTF-8
-RewriteEngine Off
+RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} ^www.cash4sms.today$ [NC]
+#RewriteRule ^(.*)$ https://cash4sms.today/$1 [R=301,L]
